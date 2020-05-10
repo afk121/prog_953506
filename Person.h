@@ -72,66 +72,66 @@ while(1)
 {
 int num=0;
 system("cls");
-printf(" Измените\n (0 - выход )\n   1 - ФИО,\n   2 - контакт,\n   3 - предпочитаемая модель,\n");
-printf("   4 - предпочитаемый год выпуска,\n   5 - предпочитаемое состояние,\n   6 - предпочитаемая цена\n");
+printf(" РР·РјРµРЅРёС‚Рµ\n (0 - РІС‹С…РѕРґ )\n   1 - Р¤РРћ,\n   2 - РєРѕРЅС‚Р°РєС‚,\n   3 - РїСЂРµРґРїРѕС‡РёС‚Р°РµРјР°СЏ РјРѕРґРµР»СЊ,\n");
+printf("   4 - РїСЂРµРґРїРѕС‡РёС‚Р°РµРјС‹Р№ РіРѕРґ РІС‹РїСѓСЃРєР°,\n   5 - РїСЂРµРґРїРѕС‡РёС‚Р°РµРјРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ,\n   6 - РїСЂРµРґРїРѕС‡РёС‚Р°РµРјР°СЏ С†РµРЅР°\n");
 int unsign=0;
 float unsignn=0;
 char chr='\n';
 switch(num=getch())
 {
-case '0':printf(" Нажмите любую клавишу, чтобы продолжить...");return;
-case '1':printf("Введите значение ");
+case '0':printf(" РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ...");return;
+case '1':printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%s",a->FIO)!=1||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		break;
 case '2':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%s",a->contact)!=1||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		break;
 case '3':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%s",a->favModel)!=1||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		break;
 case '4':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%d",&unsign)!=1||unsign<0||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		a->fageCreate=unsign;
 		break;
 case '5':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%s",a->fcondition)!=1||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		break;
 
 case '6':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%f",&unsignn)!=1||unsign<0||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		a->fprise=unsignn;
@@ -145,47 +145,47 @@ void pwrite(Person* a)
 int unsign=0;
 float unsignn=0;
 char chr='\n';
-printf("Введите ФИО ");
+printf("Р’РІРµРґРёС‚Рµ Р¤РРћ ");
 if(scanf("%s",a->FIO)!=1||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
-printf("Введите контакты ");
+printf("Р’РІРµРґРёС‚Рµ РєРѕРЅС‚Р°РєС‚С‹ ");
 if(scanf("%s",a->contact)!=1||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
-printf("Введите предпочитаемую модель  ");
+printf("Р’РІРµРґРёС‚Рµ РїСЂРµРґРїРѕС‡РёС‚Р°РµРјСѓСЋ РјРѕРґРµР»СЊ  ");
 		if(scanf("%s",a->favModel)!=1||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
-printf("Введите предпочитаемый год создания ");
+printf("Р’РІРµРґРёС‚Рµ РїСЂРµРґРїРѕС‡РёС‚Р°РµРјС‹Р№ РіРѕРґ СЃРѕР·РґР°РЅРёСЏ ");
 if(scanf("%f",&unsignn)!=1||unsignn<0||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
 a->fageCreate=unsignn;
-printf("Введите предпочитаемое состояние  ");
+printf("Р’РІРµРґРёС‚Рµ РїСЂРµРґРїРѕС‡РёС‚Р°РµРјРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ  ");
 if(scanf("%s",a->fcondition)!=1||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
-printf("Введите предпочитаемую цену ");
+printf("Р’РІРµРґРёС‚Рµ РїСЂРµРґРїРѕС‡РёС‚Р°РµРјСѓСЋ С†РµРЅСѓ ");
 if(scanf("%f",&unsignn)!=1||unsignn<0||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
 a->fprise=unsignn;
@@ -198,29 +198,29 @@ while(1)
 {
 int num=0;
 system("cls");
-printf(" Измените\n (0 - выход )\n   1 - ФИО,\n   2 - контакт,\n   3 - предпочитаемая модель,\n");
-printf("   4 - предпочитаемый год выпуска,\n   5 - предпочитаемое состояние,\n   6 - предпочитаемая цена\n");
+printf(" РР·РјРµРЅРёС‚Рµ\n (0 - РІС‹С…РѕРґ )\n   1 - Р¤РРћ,\n   2 - РєРѕРЅС‚Р°РєС‚,\n   3 - РїСЂРµРґРїРѕС‡РёС‚Р°РµРјР°СЏ РјРѕРґРµР»СЊ,\n");
+printf("   4 - РїСЂРµРґРїРѕС‡РёС‚Р°РµРјС‹Р№ РіРѕРґ РІС‹РїСѓСЃРєР°,\n   5 - РїСЂРµРґРїРѕС‡РёС‚Р°РµРјРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ,\n   6 - РїСЂРµРґРїРѕС‡РёС‚Р°РµРјР°СЏ С†РµРЅР°\n");
 switch(num=getch())
 {
-case '0':printf(" Нажмите любую клавишу, чтобы продолжить...");return;
-case '1':printf("ФИО %s",a->FIO);getch();break;
-case '2':printf("Контакт %s",a->contact);getch();break;
-case '3':printf("Предпочитаемая модель %s",a->favModel);getch();break;
-case '4':printf("Предпочитаемый год создания %u",a->fageCreate);getch();break;
-case '5':printf("Предпочитаемое состояние %s",a->fcondition);getch();break;
-case '6':printf("Предпочитаемая цена %f",a->fprise);getch();break;
+case '0':printf(" РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ...");return;
+case '1':printf("Р¤РРћ %s",a->FIO);getch();break;
+case '2':printf("РљРѕРЅС‚Р°РєС‚ %s",a->contact);getch();break;
+case '3':printf("РџСЂРµРґРїРѕС‡РёС‚Р°РµРјР°СЏ РјРѕРґРµР»СЊ %s",a->favModel);getch();break;
+case '4':printf("РџСЂРµРґРїРѕС‡РёС‚Р°РµРјС‹Р№ РіРѕРґ СЃРѕР·РґР°РЅРёСЏ %u",a->fageCreate);getch();break;
+case '5':printf("РџСЂРµРґРїРѕС‡РёС‚Р°РµРјРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ %s",a->fcondition);getch();break;
+case '6':printf("РџСЂРµРґРїРѕС‡РёС‚Р°РµРјР°СЏ С†РµРЅР° %f",a->fprise);getch();break;
 }
 }
 }
 
 void pread(Person* a)
 {
-printf("ФИО %s\n",a->FIO);
-printf("Контакт %s\n",a->contact);
-printf("Предпочитаемая модель %s\n",a->favModel);
-printf("Предпочитаемый год создания %u\n",a->fageCreate);
-printf("Предпочитаемое состояние %s\n",a->fcondition);
-printf("Предпочитаемая цена %f\n",a->fprise);
+printf("Р¤РРћ %s\n",a->FIO);
+printf("РљРѕРЅС‚Р°РєС‚ %s\n",a->contact);
+printf("РџСЂРµРґРїРѕС‡РёС‚Р°РµРјР°СЏ РјРѕРґРµР»СЊ %s\n",a->favModel);
+printf("РџСЂРµРґРїРѕС‡РёС‚Р°РµРјС‹Р№ РіРѕРґ СЃРѕР·РґР°РЅРёСЏ %u\n",a->fageCreate);
+printf("РџСЂРµРґРїРѕС‡РёС‚Р°РµРјРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ %s\n",a->fcondition);
+printf("РџСЂРµРґРїРѕС‡РёС‚Р°РµРјР°СЏ С†РµРЅР° %f\n",a->fprise);
 return;
 }
 
@@ -235,19 +235,19 @@ if(a->FIO!=NULL)
 
 	if(remove(strncat(strncat(aa,aaa,10),".txt",6)))
 	{
-	  printf("Удаляемого файла не существует");
+	  printf("РЈРґР°Р»СЏРµРјРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚");
 	  return 1;
 	}
 
 	FILE* fp=fopen(strncat(strncat(delet,delett,10),".txt",6),"w");
   if(fp==NULL)
   {
-	printf("Ошибка создания файла или неверное имя модели");
+	printf("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ С„Р°Р№Р»Р° РёР»Рё РЅРµРІРµСЂРЅРѕРµ РёРјСЏ РјРѕРґРµР»Рё");
 	return 1;
   }
   if(fclose(fp))
   {
-	 printf("Ошибка закрытия файла");
+	 printf("РћС€РёР±РєР° Р·Р°РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°");
 	 return 1;
   }
   }
@@ -377,22 +377,22 @@ return 0;
 void precover(Person* a)
 {
 Person* persona = a;
-struct ffblk f; //Создаём экземпляр структуры ffblk
+struct ffblk f; //РЎРѕР·РґР°С‘Рј СЌРєР·РµРјРїР»СЏСЂ СЃС‚СЂСѓРєС‚СѓСЂС‹ ffblk
 int done;
 int number = -1;
 
 done = findfirst("E:\\sem#2\\C\\lb7\\deletesPerson\\*.txt", &f, 0);
-if(done) { printf("Удаленные файлы отсутствуют\n");return; }
+if(done) { printf("РЈРґР°Р»РµРЅРЅС‹Рµ С„Р°Р№Р»С‹ РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‚\n");return; }
 if(!done)
 	{
 	printf("%d - %s\n",++number, f.ff_name);
 	done = findnext(&f);
 	}
-printf("Введите номер нужного файла\n");
+printf("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РЅСѓР¶РЅРѕРіРѕ С„Р°Р№Р»Р°\n");
 if(scanf(" %d",&number)!=1 || getchar()!='\n'|| number<0)
   {
 	fflush(stdin);
-	printf("Неверный тип данных\n");
+	printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…\n");
 	return;
   }
 done = findfirst("E:\\sem#2\\C\\lb7\\deletesPerson\\*.txt", &f, 0);
@@ -401,7 +401,7 @@ for(int i=0; i<number;++i)
 	done = findnext(&f);
 	if(done == -1)
 	{
-		printf("Вы ввели несуществующий номер\n");
+		printf("Р’С‹ РІРІРµР»Рё РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ РЅРѕРјРµСЂ\n");
 		return;
 	}
 }
