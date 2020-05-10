@@ -12,14 +12,16 @@
   typedef char _TCHAR;
   #define _tmain main
 #endif
-//ïîèñê ôàêòîðèàëà
+
+//Ð¿Ð¾Ð¸ÑÐº Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð»Ð°
 int fact(int a)
 {
 	if(a==0)
 	return 1;
 	return a*fact(a-1);
 }
-//ïîèñê ÷èñëà ÷åðåç ôîðìóëó
+
+//Ð¿Ð¾Ð¸ÑÐº Ñ‡Ð¸ÑÐ»Ð° Ñ‡ÐµÑ€ÐµÐ· Ñ„Ð¾Ñ€Ð¼ÑƒÐ»Ñƒ
 double razl(double* rasch, double *pogresh,double *siin)
 {
 	double formul=0;
@@ -28,12 +30,15 @@ double razl(double* rasch, double *pogresh,double *siin)
 	 formul+=pow(-1,i-1)*((powl(*rasch,2*i-1))/(fact(2*i-1)));
 
 	 if(formul>*siin)
-	 {if((formul-*siin)<*pogresh)
-	 return formul;
-	 }
+	 	{
+		if((formul-*siin)<*pogresh)
+	 	return formul;
+	 	}
 	 else
-	 {if((*siin-formul)<*pogresh)
-	 return formul;}
+	 	{ 
+	 	if((*siin-formul)<*pogresh)
+	 	return formul;
+	 	}
 	}
 	return formul;
 }
@@ -43,31 +48,31 @@ int _tmain(int argc, _TCHAR* argv[])
 SetConsoleCP(1251);
 SetConsoleOutputCP(1251);
 
-//ââîä ÷èñëà, ïî êîòîðîìó èäåò ðàñ÷åò
+//Ð²Ð²Ð¾Ð´ Ñ‡Ð¸ÑÐ»Ð°, Ð¿Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ Ð¸Ð´ÐµÑ‚ Ñ€Ð°ÑÑ‡ÐµÑ‚
  double rasch;
  char a;
-ln:printf("Ââåäèòå ÷èñëî, ïî êîòîðîìó áóäåò èäòè ðàñ÷åò: ");
+ln:printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾, Ð¿Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ Ð±ÑƒÐ´ÐµÑ‚ Ð¸Ð´Ñ‚Ð¸ Ñ€Ð°ÑÑ‡ÐµÑ‚: ");
 if(scanf("%lf",&rasch)!=1||(a=getchar())!='\n')
 {
-	printf("Íåâåðíûé ââîä,ïîïðîáóéòå ñíîâà\n");
+	printf("ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´,Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°\n");
 	fflush (stdin);
 	goto ln;
 }
 fflush (stdin);
-//ââîä ïîãðåøíîñòè â ôîðìóëå
+//Ð²Ð²Ð¾Ð´ Ð¿Ð¾Ð³Ñ€ÐµÑˆÐ½Ð¾ÑÑ‚Ð¸ Ð² Ñ„Ð¾Ñ€Ð¼ÑƒÐ»Ðµ
 double pogresh;
-li:printf("Ââåäèòå ïîãðåøíîñòü: ");
+li:printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð³Ñ€ÐµÑˆÐ½Ð¾ÑÑ‚ÑŒ: ");
 if(scanf("%lf",&pogresh)!=1||(a=getchar())!='\n')
 {
-	printf("Íåâåðíûé ââîä,ïîïðîáóéòå ñíîâà\n");
+	printf("ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´,Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°\n");
 	fflush (stdin);
 	goto li;
 }
 
 double siin=sin(rasch);
 double formul=razl(&rasch,&pogresh,&siin);
-printf("Ñèíóñ îò ÷èñëà ðàâåí %f\n",siin);
-printf("Ñóììà ÷èñëà ïî ôîðìóëå ðàâíà%f",formul);
+printf("Ð¡Ð¸Ð½ÑƒÑ Ð¾Ñ‚ Ñ‡Ð¸ÑÐ»Ð° Ñ€Ð°Ð²ÐµÐ½ %f\n",siin);
+printf("Ð¡ÑƒÐ¼Ð¼Ð° Ñ‡Ð¸ÑÐ»Ð° Ð¿Ð¾ Ñ„Ð¾Ñ€Ð¼ÑƒÐ»Ðµ Ñ€Ð°Ð²Ð½Ð°%f",formul);
 getch();
 	return 0;
 }
