@@ -60,7 +60,7 @@ char* aaa=a->model;
 FILE* fp=fopen(strncat(strncat(aa,aaa,10),".txt",6),"w");
 if(fp==NULL)
   {
-	printf("Ошибка создания файла или неверное имя модели");
+	printf("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ С„Р°Р№Р»Р° РёР»Рё РЅРµРІРµСЂРЅРѕРµ РёРјСЏ РјРѕРґРµР»Рё");
 	return 1;
   }
 fprintf(fp,"%s\n%u\n%u\n%f\n%u\n%s\n%s\n%s\n%f\n",a->model,a->ageCreate,a->mileAge,a->engineSize,a->power,a->transmission,a->gearBox,a->condision,a->price);
@@ -70,7 +70,7 @@ if(fclose(fp))
 	 printf("Error2");
 	 return 1;
   }
-printf("Файл создан. Нажмите любую клавишу, чтобы продолжить... ");
+printf("Р¤Р°Р№Р» СЃРѕР·РґР°РЅ. РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ... ");
 return 0;
 }
 
@@ -80,95 +80,95 @@ while(1)
 {
 int num=0;
 system("cls");
-printf(" Измените\n (0 - выход )\n   1 - модель,\n   2 - год производства,\n   3 - пробег,км.,\n   4 - объем двигателя,л.,\n");
-printf("   5 - мощность(л.с.),\n   6 - тип привода,\n   7 - тип коробки передач,\n   8 - состояния,\n   9 - цена,\n");
+printf(" РР·РјРµРЅРёС‚Рµ\n (0 - РІС‹С…РѕРґ )\n   1 - РјРѕРґРµР»СЊ,\n   2 - РіРѕРґ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°,\n   3 - РїСЂРѕР±РµРі,РєРј.,\n   4 - РѕР±СЉРµРј РґРІРёРіР°С‚РµР»СЏ,Р».,\n");
+printf("   5 - РјРѕС‰РЅРѕСЃС‚СЊ(Р».СЃ.),\n   6 - С‚РёРї РїСЂРёРІРѕРґР°,\n   7 - С‚РёРї РєРѕСЂРѕР±РєРё РїРµСЂРµРґР°С‡,\n   8 - СЃРѕСЃС‚РѕСЏРЅРёСЏ,\n   9 - С†РµРЅР°,\n");
 int unsign=0;
 float unsignn=0;
 char chr='\n';
 switch(num=getch())
 {
-case '0':printf(" Нажмите любую клавишу, чтобы продолжить...");return;
-case '1':printf("Введите значение ");
+case '0':printf(" РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ...");return;
+case '1':printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%s",a->model)!=1||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		break;
 case '2':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%d",&unsign)!=1||unsign<0||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		a->ageCreate=unsign;
 		break;
 case '3':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%d",&unsign)!=1||unsign<0||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		a->mileAge=unsign;
 		break;
 case '4':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%f",&unsignn)!=1||unsignn<0||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		a->engineSize=unsignn;
 		break;
 case '5':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%d",&unsign)!=1||unsign<0||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		a->power=unsign;
 		break;
 case '6':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%s",a->transmission)!=1||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		break;
 case '7':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%s",a->gearBox)!=1||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		break;
 case '8':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%s",a->condision)!=1||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		break;
 case '9':
-		printf("Введите значение ");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ ");
 		if(scanf("%f",&unsignn)!=1||unsignn<0||(chr=getchar())!='\n')
 		{
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		break;
 		}
 		a->price=unsignn;
@@ -182,71 +182,71 @@ void awrite(Avto* a)
 int unsign=0;
 float unsignn=0;
 char chr='\n';
-printf("Введите модель ");
+printf("Р’РІРµРґРёС‚Рµ РјРѕРґРµР»СЊ ");
 if(scanf("%s",a->model)!=1||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
-printf("Введите возраст машины ");
+printf("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ РјР°С€РёРЅС‹ ");
 if(scanf("%d",&unsign)!=1||unsign<0||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
 a->ageCreate=unsign;
-printf("Введите пробег ");
+printf("Р’РІРµРґРёС‚Рµ РїСЂРѕР±РµРі ");
 if(scanf("%d",&unsign)!=1||unsign<0||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
 a->mileAge=unsign;
-printf("Введите объем двигателя ");
+printf("Р’РІРµРґРёС‚Рµ РѕР±СЉРµРј РґРІРёРіР°С‚РµР»СЏ ");
 if(scanf("%f",&unsignn)!=1||unsignn<0||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
 a->engineSize=unsignn;
-printf("Введите мощность двигателя ");
+printf("Р’РІРµРґРёС‚Рµ РјРѕС‰РЅРѕСЃС‚СЊ РґРІРёРіР°С‚РµР»СЏ ");
 if(scanf("%d",&unsign)!=1||unsign<0||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
 a->power=unsign;
-printf("Введите тип привода ");
+printf("Р’РІРµРґРёС‚Рµ С‚РёРї РїСЂРёРІРѕРґР° ");
 if(scanf("%s",a->transmission)!=1||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
-printf("Введите тип коробки передач ");
+printf("Р’РІРµРґРёС‚Рµ С‚РёРї РєРѕСЂРѕР±РєРё РїРµСЂРµРґР°С‡ ");
 if(scanf("%s",a->gearBox)!=1||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
-printf("Введите качество автомобиля ");
+printf("Р’РІРµРґРёС‚Рµ РєР°С‡РµСЃС‚РІРѕ Р°РІС‚РѕРјРѕР±РёР»СЏ ");
 if(scanf("%s",a->condision)!=1||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
-printf("Введите цену ");
+printf("Р’РІРµРґРёС‚Рµ С†РµРЅСѓ ");
 if(scanf("%f",&unsignn)!=1||unsignn<0||(chr=getchar())!='\n')
 {
 		fflush(stdin);
-		printf("Неверный тип данных");
+		printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…");
 		return;
 }
 a->price=unsignn;
@@ -259,35 +259,35 @@ while(1)
 {
 int num=0;
 system("cls");
-printf(" Выберите\n (0 - выход )\n   1 - модель,\n   2 - год производства,\n   3 - пробег,км.,\n   4 - объем двигателя,л.,\n");
-printf("   5 - мощность(л.с.),\n   6 - тип привода,\n   7 - тип коробки передач,\n   8 - состояния,\n   9 - цена,\n");
+printf(" Р’С‹Р±РµСЂРёС‚Рµ\n (0 - РІС‹С…РѕРґ )\n   1 - РјРѕРґРµР»СЊ,\n   2 - РіРѕРґ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°,\n   3 - РїСЂРѕР±РµРі,РєРј.,\n   4 - РѕР±СЉРµРј РґРІРёРіР°С‚РµР»СЏ,Р».,\n");
+printf("   5 - РјРѕС‰РЅРѕСЃС‚СЊ(Р».СЃ.),\n   6 - С‚РёРї РїСЂРёРІРѕРґР°,\n   7 - С‚РёРї РєРѕСЂРѕР±РєРё РїРµСЂРµРґР°С‡,\n   8 - СЃРѕСЃС‚РѕСЏРЅРёСЏ,\n   9 - С†РµРЅР°,\n");
 switch(num=getch())
 {
-case '0':printf(" Нажмите любую клавишу, чтобы продолжить...");return;
-case '1':printf("Модель %s",a->model);getch();break;
-case '2':printf("Возраст равен %u",a->ageCreate);getch();break;
-case '3':printf("Пробег равен %u",a->mileAge);getch();break;
-case '4':printf("Объем двигателя равен %f",a->engineSize);getch();break;
-case '5':printf("Мощность равна%u",a->power);getch();break;
-case '6':printf("Тип привод %s",a->transmission);getch();break;
-case '7':printf("Тип коробки передач %s",a->gearBox);getch();break;
-case '8':printf("Состояние %s",a->condision);getch();break;
-case '9':printf("Цена %f",a->price);getch();break;
+case '0':printf(" РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ...");return;
+case '1':printf("РњРѕРґРµР»СЊ %s",a->model);getch();break;
+case '2':printf("Р’РѕР·СЂР°СЃС‚ СЂР°РІРµРЅ %u",a->ageCreate);getch();break;
+case '3':printf("РџСЂРѕР±РµРі СЂР°РІРµРЅ %u",a->mileAge);getch();break;
+case '4':printf("РћР±СЉРµРј РґРІРёРіР°С‚РµР»СЏ СЂР°РІРµРЅ %f",a->engineSize);getch();break;
+case '5':printf("РњРѕС‰РЅРѕСЃС‚СЊ СЂР°РІРЅР°%u",a->power);getch();break;
+case '6':printf("РўРёРї РїСЂРёРІРѕРґ %s",a->transmission);getch();break;
+case '7':printf("РўРёРї РєРѕСЂРѕР±РєРё РїРµСЂРµРґР°С‡ %s",a->gearBox);getch();break;
+case '8':printf("РЎРѕСЃС‚РѕСЏРЅРёРµ %s",a->condision);getch();break;
+case '9':printf("Р¦РµРЅР° %f",a->price);getch();break;
 }
 }
 }
 
 void aread(Avto* a)
 {
-printf("Модель %s\n",a->model);
-printf("Возраст машины %d\n",a->ageCreate);
-printf("Пробег %d\n",a->mileAge);
-printf("Объем двигателя %f\n",a->engineSize);
-printf("Мощность двигателя %d\n",a->power);
-printf("Тип привода %s\n",a->transmission);
-printf("Тип коробки передач %s\n",a->gearBox);
-printf("Качество автомобиля %s\n",a->condision);
-printf("Цена %f\n",a->price);
+printf("РњРѕРґРµР»СЊ %s\n",a->model);
+printf("Р’РѕР·СЂР°СЃС‚ РјР°С€РёРЅС‹ %d\n",a->ageCreate);
+printf("РџСЂРѕР±РµРі %d\n",a->mileAge);
+printf("РћР±СЉРµРј РґРІРёРіР°С‚РµР»СЏ %f\n",a->engineSize);
+printf("РњРѕС‰РЅРѕСЃС‚СЊ РґРІРёРіР°С‚РµР»СЏ %d\n",a->power);
+printf("РўРёРї РїСЂРёРІРѕРґР° %s\n",a->transmission);
+printf("РўРёРї РєРѕСЂРѕР±РєРё РїРµСЂРµРґР°С‡ %s\n",a->gearBox);
+printf("РљР°С‡РµСЃС‚РІРѕ Р°РІС‚РѕРјРѕР±РёР»СЏ %s\n",a->condision);
+printf("Р¦РµРЅР° %f\n",a->price);
 return;
 }
 
@@ -302,19 +302,19 @@ if(a->model!=NULL)
 
 	if(remove(strncat(strncat(aa,aaa,10),".txt",6)))
 	{
-	  printf("Удаляемого файла не существует");
+	  printf("РЈРґР°Р»СЏРµРјРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚");
 	  return 1;
 	}
 
 	FILE* fp=fopen(strncat(strncat(delet,delett,10),".txt",6),"w");
   if(fp==NULL)
   {
-	printf("Ошибка создания файла или неверное имя модели");
+	printf("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ С„Р°Р№Р»Р° РёР»Рё РЅРµРІРµСЂРЅРѕРµ РёРјСЏ РјРѕРґРµР»Рё");
 	return 1;
   }
   if(fclose(fp))
   {
-	 printf("Ошибка закрытия файла");
+	 printf("РћС€РёР±РєР° Р·Р°РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°");
 	 return 1;
   }
   }
@@ -352,12 +352,12 @@ if(a->model!=NULL)
   FILE* fp=fopen(strncat(strncat(aa,aaa,10),".txt",6),"w");
   if(fp==NULL)
   {
-	printf("Ошибка создания файла или неверное имя модели");
+	printf("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ С„Р°Р№Р»Р° РёР»Рё РЅРµРІРµСЂРЅРѕРµ РёРјСЏ РјРѕРґРµР»Рё");
 	return 1;
   }
   if(fclose(fp))
   {
-	 printf("Ошибка закрытия файла");
+	 printf("РћС€РёР±РєР° Р·Р°РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°");
 	 return 1;
   }
 }
@@ -370,17 +370,17 @@ char aa[]="e:\\sem#2\\C\\lb7\\Avto1\\";
 FILE* fp=fopen(strncat(aa,fone,10),"r");
 if(fp==NULL)
   {
-	printf("Имя файла неверно, или такого файла не существует");
+	printf("РРјСЏ С„Р°Р№Р»Р° РЅРµРІРµСЂРЅРѕ, РёР»Рё С‚Р°РєРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚");
 	return 1;
   }
 if(fscanf(fp,"%s\n%u\n%u\n%f\n%u\n%s\n%s\n%s\n%f\n",a->model,&a->ageCreate,&a->mileAge,&a->engineSize,&a->power,a->transmission,a->gearBox,a->condision,&a->price)!=9)
 {
-	printf("В файле недостает данных или их тип неверен");
+	printf("Р’ С„Р°Р№Р»Рµ РЅРµРґРѕСЃС‚Р°РµС‚ РґР°РЅРЅС‹С… РёР»Рё РёС… С‚РёРї РЅРµРІРµСЂРµРЅ");
 	return 1;
 }
 if(fclose(fp))
   {
-	 printf("Ошибка закоытия файла");
+	 printf("РћС€РёР±РєР° Р·Р°РєРѕС‹С‚РёСЏ С„Р°Р№Р»Р°");
 	 return 1;
   }
 return 0;
@@ -393,17 +393,17 @@ char* aaa=a->model;
 FILE* fp=fopen(strncat(strncat(aa,aaa,10),".txt",6),"r");
 if(fp==NULL)
   {
-	printf("Имя файла неверно, или такого файла не существует");
+	printf("РРјСЏ С„Р°Р№Р»Р° РЅРµРІРµСЂРЅРѕ, РёР»Рё С‚Р°РєРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚");
 	return 1;
   }
 if(fscanf(fp,"%s\n%u\n%u\n%f\n%u\n%s\n%s\n%s\n%f\n",a->model,&a->ageCreate,&a->mileAge,&a->engineSize,&a->power,a->transmission,a->gearBox,a->condision,&a->price)!=9)
 {
-	printf("В файле недостает данных или их тип неверен");
+	printf("Р’ С„Р°Р№Р»Рµ РЅРµРґРѕСЃС‚Р°РµС‚ РґР°РЅРЅС‹С… РёР»Рё РёС… С‚РёРї РЅРµРІРµСЂРµРЅ");
 	return 1;
 }
 if(fclose(fp))
   {
-	 printf("Ошибка закоытия файла");
+	 printf("РћС€РёР±РєР° Р·Р°РєРѕС‹С‚РёСЏ С„Р°Р№Р»Р°");
 	 return 1;
   }
 return 0;
@@ -418,7 +418,7 @@ char aa[]="e:\\sem#2\\C\\lb7\\Avto1\\";
 FILE* fp=fopen(strncat(strncat(aa,a->model,10),".txt",6),"w");
 if(fp==NULL)
   {
-	printf("Ошибка создания файла или неверное имя модели");
+	printf("РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ С„Р°Р№Р»Р° РёР»Рё РЅРµРІРµСЂРЅРѕРµ РёРјСЏ РјРѕРґРµР»Рё");
 	return;
   }
 fprintf(fp,"%s\n%u\n%u\n%f\n%u\n%s\n%s\n%s\n%f\n",a->model,a->ageCreate,a->mileAge,a->engineSize,a->power,a->transmission,a->gearBox,a->condision,a->price);
@@ -515,22 +515,22 @@ sortVybor(a,&i,&num,symbol);
 void arecover(Avto* a)
 {
 Avto* ayto = a;
-struct ffblk f; //Создаём экземпляр структуры ffblk
+struct ffblk f; //РЎРѕР·РґР°С‘Рј СЌРєР·РµРјРїР»СЏСЂ СЃС‚СЂСѓРєС‚СѓСЂС‹ ffblk
 int done;
 int number = -1;
 
 done = findfirst("E:\\sem#2\\C\\lb7\\deletesAvto\\*.txt", &f, 0);
-if(done) { printf("Удаленные файлы отсутствуют\n");return; }
+if(done) { printf("РЈРґР°Р»РµРЅРЅС‹Рµ С„Р°Р№Р»С‹ РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‚\n");return; }
 if(!done)
 	{
 	printf("%d - %s\n",++number, f.ff_name);
 	done = findnext(&f);
 	}
-printf("Введите номер нужного файла\n");
+printf("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РЅСѓР¶РЅРѕРіРѕ С„Р°Р№Р»Р°\n");
 if(scanf(" %d",&number)!=1 || getchar()!='\n'|| number<0)
   {
 	fflush(stdin);
-	printf("Неверный тип данных\n");
+	printf("РќРµРІРµСЂРЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С…\n");
 	return;
   }
 done = findfirst("E:\\sem#2\\C\\lb7\\deletesAvto\\*.txt", &f, 0);
@@ -539,7 +539,7 @@ for(int i=0; i<number; ++i)
 	done = findnext(&f);
 	if(done == -1)
 	{
-		printf("Вы ввели несуществующий номер\n");
+		printf("Р’С‹ РІРІРµР»Рё РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ РЅРѕРјРµСЂ\n");
 		return;
 	}
 }
@@ -562,7 +562,7 @@ for(;;)
 
 		if(fscanf(fp,"%s\n%u\n%u\n%f\n%u\n%s\n%s\n%s\n%f\n",ayto->model,&ayto->ageCreate,&ayto->mileAge,&ayto->engineSize,&ayto->power,ayto->transmission,ayto->gearBox,ayto->condision,&ayto->price)!=9)
 		{
-			printf("В файле недостает данных или их тип неверен");
+			printf("Р’ С„Р°Р№Р»Рµ РЅРµРґРѕСЃС‚Р°РµС‚ РґР°РЅРЅС‹С… РёР»Рё РёС… С‚РёРї РЅРµРІРµСЂРµРЅ");
 			return ;
 		}
 
