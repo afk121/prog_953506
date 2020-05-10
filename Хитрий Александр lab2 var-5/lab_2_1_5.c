@@ -14,20 +14,21 @@
 
 void menu()
 {
- printf("Меню: для обращения введите\n1 - Заказ картофеля \n2 - Заказ моркови \n3 - Заказ свеклы\n");
- printf("4 - вывод размера заказанных овощец\n5- вывод общей стоимости \n6 - информация о магазинк \n7 - выход из программы\n(если вы введете что-либо другое, программа завершится)\n(читается только первый символ!!!Все остальное просто стирается)\n ");
+ printf("РњРµРЅСЋ: РґР»СЏ РѕР±СЂР°С‰РµРЅРёСЏ РІРІРµРґРёС‚Рµ\n1 - Р—Р°РєР°Р· РєР°СЂС‚РѕС„РµР»СЏ \n2 - Р—Р°РєР°Р· РјРѕСЂРєРѕРІРё \n3 - Р—Р°РєР°Р· СЃРІРµРєР»С‹\n");
+ printf("4 - РІС‹РІРѕРґ СЂР°Р·РјРµСЂР° Р·Р°РєР°Р·Р°РЅРЅС‹С… РѕРІРѕС‰РµС†\n5- РІС‹РІРѕРґ РѕР±С‰РµР№ СЃС‚РѕРёРјРѕСЃС‚Рё \n6 - РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РјР°РіР°Р·РёРЅРє \n7 - РІС‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹\n(РµСЃР»Рё РІС‹ РІРІРµРґРµС‚Рµ С‡С‚Рѕ-Р»РёР±Рѕ РґСЂСѓРіРѕРµ, РїСЂРѕРіСЂР°РјРјР° Р·Р°РІРµСЂС€РёС‚СЃСЏ)\n(С‡РёС‚Р°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РїРµСЂРІС‹Р№ СЃРёРјРІРѕР»!!!Р’СЃРµ РѕСЃС‚Р°Р»СЊРЅРѕРµ РїСЂРѕСЃС‚Рѕ СЃС‚РёСЂР°РµС‚СЃСЏ)\n ");
 }
-//требуется ввести два числа, первое - числитель, второе -  знаменатель
+
+//С‚СЂРµР±СѓРµС‚СЃСЏ РІРІРµСЃС‚Рё РґРІР° С‡РёСЃР»Р°, РїРµСЂРІРѕРµ - С‡РёСЃР»РёС‚РµР»СЊ, РІС‚РѕСЂРѕРµ -  Р·РЅР°РјРµРЅР°С‚РµР»СЊ
 void vvodPotato(float* potato)
 {
 char c;
 system("cls");
-	  printf("Введите массу заказываемого картофеля\t");
+	  printf("Р’РІРµРґРёС‚Рµ РјР°СЃСЃСѓ Р·Р°РєР°Р·С‹РІР°РµРјРѕРіРѕ РєР°СЂС‚РѕС„РµР»СЏ\t");
 	  if(scanf("%f",potato)!=1||(c=getchar())!='\n'||*potato<0)
 	  {
-		  printf("Неверный ввод");
+		  printf("РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ");
 		  fflush (stdin);
-          getch();
+          	  getch();
 		  return;
 	  }
 }
@@ -36,12 +37,12 @@ void vvodMorkov(float* morkov)
 {
 char c;
 system("cls");
-	  printf("Введите массу заказываемой моркови\t");
+	  printf("Р’РІРµРґРёС‚Рµ РјР°СЃСЃСѓ Р·Р°РєР°Р·С‹РІР°РµРјРѕР№ РјРѕСЂРєРѕРІРё\t");
 	  if(scanf("%f",morkov)!=1||(c=getchar())!='\n'||*morkov<0)
 	  {
-		  printf("Неверный ввод");
+		  printf("РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ");
 		  fflush (stdin);
-          getch();
+          	  getch();
 		  return;
 	  }
 }
@@ -50,12 +51,12 @@ void vvodSvekla(float* svekla)
 {
 char c;
 system("cls");
-	  printf("Введите массу заказываемой моркови\t");
+	  printf("Р’РІРµРґРёС‚Рµ РјР°СЃСЃСѓ Р·Р°РєР°Р·С‹РІР°РµРјРѕР№ РјРѕСЂРєРѕРІРё\t");
 	  if(scanf("%f",svekla)!=1||(c=getchar())!='\n'||*svekla<0)
 	  {
-		  printf("Неверный ввод");
+		  printf("РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ");
 		  fflush (stdin);
-          getch();
+          	  getch();
 		  return;
 	  }
 }
@@ -63,7 +64,7 @@ system("cls");
 void vyvodRazmer(float* potato,float* morkov,float* svekla)
 {
 system("cls");
-printf("Масса картофеля = %f кг,его стоимость равна %d р.\n Масса моркови = %f кг,ее стоимость равна %d р.\n Масса свеклы равна %f кг,ее стоимость равна %d р.\n",*potato,(int)(500*(*potato)),*morkov,(int)(1000*(*morkov)),*svekla,(int)((*svekla)*700));
+printf("РњР°СЃСЃР° РєР°СЂС‚РѕС„РµР»СЏ = %f РєРі,РµРіРѕ СЃС‚РѕРёРјРѕСЃС‚СЊ СЂР°РІРЅР° %d СЂ.\n РњР°СЃСЃР° РјРѕСЂРєРѕРІРё = %f РєРі,РµРµ СЃС‚РѕРёРјРѕСЃС‚СЊ СЂР°РІРЅР° %d СЂ.\n РњР°СЃСЃР° СЃРІРµРєР»С‹ СЂР°РІРЅР° %f РєРі,РµРµ СЃС‚РѕРёРјРѕСЃС‚СЊ СЂР°РІРЅР° %d СЂ.\n",*potato,(int)(500*(*potato)),*morkov,(int)(1000*(*morkov)),*svekla,(int)((*svekla)*700));
 getch();
 }
 
@@ -71,8 +72,8 @@ getch();
 void vyvodDengi(float* potato,float* morkov,float* svekla)
 {
 system("cls");
-printf("Масса картофеля = %f кг,его стоимость равна %d р.\n Масса моркови = %f кг,ее стоимость равна %d р.\n Масса свеклы равна %f кг,ее стоимость равна %d р.\n",*potato,(int)(500*(*potato)),*morkov,(int)(1000*(*morkov)),*svekla,(int)((*svekla)*700));
-printf("Доставка стоит 15.000 рублей\n");
+printf("РњР°СЃСЃР° РєР°СЂС‚РѕС„РµР»СЏ = %f РєРі,РµРіРѕ СЃС‚РѕРёРјРѕСЃС‚СЊ СЂР°РІРЅР° %d СЂ.\n РњР°СЃСЃР° РјРѕСЂРєРѕРІРё = %f РєРі,РµРµ СЃС‚РѕРёРјРѕСЃС‚СЊ СЂР°РІРЅР° %d СЂ.\n РњР°СЃСЃР° СЃРІРµРєР»С‹ СЂР°РІРЅР° %f РєРі,РµРµ СЃС‚РѕРёРјРѕСЃС‚СЊ СЂР°РІРЅР° %d СЂ.\n",*potato,(int)(500*(*potato)),*morkov,(int)(1000*(*morkov)),*svekla,(int)((*svekla)*700));
+printf("Р”РѕСЃС‚Р°РІРєР° СЃС‚РѕРёС‚ 15.000 СЂСѓР±Р»РµР№\n");
 float sum=*potato+*morkov+*svekla;
 float skidka=1;
 if(sum>10&&sum<25)
@@ -81,8 +82,8 @@ else if(sum>=25&&sum<50)
 skidka=0.79;
 else if(sum>=50)
 skidka=0.7;
-printf("Скидка равна %d\n",(int)(100-100*skidka));
-printf("Стоимость заказа равна %d\n",(int)((500*(*potato)+1000*(*morkov)+700*(*svekla)+15000)*(skidka+0.01)));
+printf("РЎРєРёРґРєР° СЂР°РІРЅР° %d\n",(int)(100-100*skidka));
+printf("РЎС‚РѕРёРјРѕСЃС‚СЊ Р·Р°РєР°Р·Р° СЂР°РІРЅР° %d\n",(int)((500*(*potato)+1000*(*morkov)+700*(*svekla)+15000)*(skidka+0.01)));
 getch();
 }
 
@@ -90,7 +91,7 @@ getch();
 void vers()
 {
 system("cls");
-	printf("Все ясно, Автору 10 лет");
+	printf("Р’СЃРµ СЏСЃРЅРѕ, РђРІС‚РѕСЂСѓ 10 Р»РµС‚");
 	getch();
 }
 
@@ -112,20 +113,16 @@ int _tmain(int argc, _TCHAR* argv[])
  r=getchar();
  fflush (stdin);
  switch(r)
- {
- case '1': vvodPotato(&potato);break;
- case '2': vvodMorkov(&morkov);break;
- case '3': vvodSvekla(&svekla); break;
- case '4': vyvodRazmer(&potato,&morkov,&svekla); break;
- case '5': vyvodDengi(&potato,&morkov,&svekla); break;
- case '6': vers();break;
- case '7':a=0;break;
- default: printf("Неверный ввод,нечего программу ломать");
- getch();
- a=0;
- }
- }
-
-
-	return 0;
+	{
+ 	case '1': vvodPotato(&potato); break;
+ 	case '2': vvodMorkov(&morkov); break;
+ 	case '3': vvodSvekla(&svekla); break;
+ 	case '4': vyvodRazmer(&potato,&morkov,&svekla); break;
+ 	case '5': vyvodDengi(&potato,&morkov,&svekla); break;
+ 	case '6': vers(); break;
+ 	case '7':a=0; break;
+ 	default: printf("РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ,РЅРµС‡РµРіРѕ РїСЂРѕРіСЂР°РјРјСѓ Р»РѕРјР°С‚СЊ"); getch(); a = 0;
+ 	}
+}
+return 0;
 }
