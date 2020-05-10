@@ -22,40 +22,40 @@ void dataBase(Avto* avto,Person* persona)
 {
 Avto* avto1 = avto;
 Person* persona1 = persona;
-struct ffblk f; //Ñîçäà¸ì ýêçåìïëÿð ñòðóêòóðû ffblk
+struct ffblk f; //Ð¡Ð¾Ð·Ð´Ð°Ñ‘Ð¼ ÑÐºÐ·ÐµÐ¼Ð¿Ð»ÑÑ€ ÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€Ñ‹ ffblk
 int done;
 
 done = findfirst("E:\\sem#2\\C\\lb7\\Person1\\*.txt", &f, 0);
-//Èùåì ïîêà åñòü ôàéëû
+//Ð˜Ñ‰ÐµÐ¼ Ð¿Ð¾ÐºÐ° ÐµÑÑ‚ÑŒ Ñ„Ð°Ð¹Ð»Ñ‹
 if(!done)
 	{
 	ffpread(persona1, f.ff_name);
-	ffpread(persona1, f.ff_name); //Ïèøåì èìÿ ôàéëà
-	done = findnext(&f); //Èùåì ñëåäóþùèé òàêîé ôàéë
+	ffpread(persona1, f.ff_name); //ÐŸÐ¸ÑˆÐµÐ¼ Ð¸Ð¼Ñ Ñ„Ð°Ð¹Ð»Ð°
+	done = findnext(&f); //Ð˜Ñ‰ÐµÐ¼ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ð¹ Ñ‚Ð°ÐºÐ¾Ð¹ Ñ„Ð°Ð¹Ð»
 	}
 while (!done)
 {
 pcr(persona1);
 persona1 = persona1->next;
-ffpread(persona1, f.ff_name); //Ïèøåì èìÿ ôàéëà
-done = findnext(&f); //Èùåì ñëåäóþùèé òàêîé ôàéë
+ffpread(persona1, f.ff_name); //ÐŸÐ¸ÑˆÐµÐ¼ Ð¸Ð¼Ñ Ñ„Ð°Ð¹Ð»Ð°
+done = findnext(&f); //Ð˜Ñ‰ÐµÐ¼ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ð¹ Ñ‚Ð°ÐºÐ¾Ð¹ Ñ„Ð°Ð¹Ð»
 }
 
 done = findfirst("E:\\sem#2\\C\\lb7\\Avto1\\*.txt", &f, 0);
 if(!done)
 	{
 	ffaread(avto, f.ff_name);
-	ffaread(avto, f.ff_name); //Ïèøåì èìÿ ôàéëà
-	done = findnext(&f); //Èùåì ñëåäóþùèé òàêîé ôàéë
+	ffaread(avto, f.ff_name); //ÐŸÐ¸ÑˆÐµÐ¼ Ð¸Ð¼Ñ Ñ„Ð°Ð¹Ð»Ð°
+	done = findnext(&f); //Ð˜Ñ‰ÐµÐ¼ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ð¹ Ñ‚Ð°ÐºÐ¾Ð¹ Ñ„Ð°Ð¹Ð»
 	}
 while (!done)
 {
-ffaread(avto, f.ff_name); //Ïèøåì èìÿ ôàéëà
+ffaread(avto, f.ff_name); //ÐŸÐ¸ÑˆÐµÐ¼ Ð¸Ð¼Ñ Ñ„Ð°Ð¹Ð»Ð°
 
 acr(avto1);
 avto1 = avto1->next;
 
-done = findnext(&f); //Èùåì ñëåäóþùèé òàêîé ôàéë
+done = findnext(&f); //Ð˜Ñ‰ÐµÐ¼ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ð¹ Ñ‚Ð°ÐºÐ¾Ð¹ Ñ„Ð°Ð¹Ð»
 }
 }
 
@@ -71,10 +71,10 @@ for(;;)
 	b = b->next;
 	}
 b = acreate();
-printf("Ââåäèòå æåëàåìûå äàííûå îá àâòîìîáèëå.\n Åñëè êàêîé-ëèáî ïàðàìåòð íå âàæåí, ââåäèòå '0'\n ");
+printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¶ÐµÐ»Ð°ÐµÐ¼Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¾Ð± Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ðµ.\n Ð•ÑÐ»Ð¸ ÐºÐ°ÐºÐ¾Ð¹-Ð»Ð¸Ð±Ð¾ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€ Ð½Ðµ Ð²Ð°Ð¶ÐµÐ½, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ '0'\n ");
 awrite(b);
 Avto* comparison = a;
-printf("Âîçìîæíûå âàðèàíòû :\n");
+printf("Ð’Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ñ‹Ðµ Ð²Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ :\n");
 for(;;)
 	{
 	if(comparison->model == b->model || (strlen(b->model) == 1 && b->model[0]=='0'))
@@ -117,7 +117,7 @@ float profit(Avto* a)
 void query(Avto* ayto, Person* perso)
 {
 int choose = 0;
-printf("Âûáåðèòå ïîêóïàòåëÿ\n");
+printf("Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¿Ð¾ÐºÑƒÐ¿Ð°Ñ‚ÐµÐ»Ñ\n");
 Person* p = perso;
 Avto* a = ayto;
 ppelement(p);
@@ -172,18 +172,4 @@ fl = fopen(strncat(strncat(aaa,a->model,30),".txt",6),"w");
 fprintf(fl,"%s\n%u\n%u\n%f\n%u\n%s\n%s\n%s\n%f\n",a->model,a->ageCreate,a->mileAge,a->engineSize,a->power,a->transmission,a->gearBox,a->condision, profit(a));
 fclose(fl);
 }
-
-
-
 #endif
-/*char* model;
-unsigned int ageCreate;
-unsigned int mileAge;
-float engineSize;
-unsigned int power;
-char* transmission;
-char* gearBox;
-char* condision;
-float price;
-struct avto* next;
-struct avto* prev;*/
