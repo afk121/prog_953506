@@ -19,9 +19,17 @@ struct person* next;
 struct person* prev;
 } Person ;
 
+void premove(Person*);
+
 struct person* pcreate()
 {
 Person* a=(Person*)calloc(1,sizeof(Person));
+if(a == NULL)
+{
+	printf("Не удалось выделить память для нового элемента");
+	getch();
+	return NULL;
+}
 a->index=0;
 a->next=NULL;
 a->prev=NULL;
@@ -30,6 +38,13 @@ a->contact=(char*)calloc(30,sizeof(char));
 a->favModel=(char*)calloc(20,sizeof(char));
 a->fageCreate=1885;
 a->fcondition=(char*)calloc(20,sizeof(char));
+if(a->FIO == NULL||a->contact==NULL||a->favModel==NULL||a->fcondition==NULL)
+{
+	printf("Не удалось выделить память для нового элемента");
+	premove(a);
+	getch();
+	return NULL;
+}
 a->fprise=0;
 return a;
 }
@@ -39,6 +54,8 @@ void pcr(Person* a)
 if(a->next==NULL)
 {
 a->next=pcreate();
+if(a->next==NULL)
+return;
 a->next->prev=a;
 a->next->index=a->index+1;
 return;
