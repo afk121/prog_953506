@@ -15,13 +15,13 @@
 #endif
 
 //циклический сдвиг строки из файла на п букв
-void smen(int j,char fail[j])
+void smen(int razmer,char fail[j])
 {
 	char smen=fail[0];
 	char smen2;
-	for(int i=0;i<j;++i)
+	for(int i=0;i<razmer;++i)
 	{
-    if(i==j-1)
+    if(i==razmer-1)
 	{fail[0]=smen;return;}
 	smen2=fail[i+1];
 	fail[i+1]=smen;
