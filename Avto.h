@@ -23,9 +23,17 @@ struct avto* next;
 struct avto* prev;
 } Avto ;
 
+void aremove(Avto*);
+
 struct avto* acreate()
 {
 Avto* a=(Avto*)calloc(1,sizeof(Avto));
+if(a == NULL)
+{
+	printf("Не удалось выделить память для нового элемента");
+	getch();
+	return NULL;
+}
 a->index=0;
 a->next=NULL;
 a->prev=NULL;
@@ -37,6 +45,13 @@ a->power=0;
 a->transmission=(char*)calloc(20,sizeof(char));
 a->gearBox=(char*)calloc(20,sizeof(char));
 a->condision=(char*)calloc(20,sizeof(char));
+if(a->model == NULL||a->transmission==NULL||a->gearBox==NULL||a->condision==NULL)
+{
+	printf("Не удалось выделить память для нового элемента");
+	aremove(a);
+	getch();
+	return NULL;
+}
 a->price=0;
 return a;
 }
@@ -46,6 +61,8 @@ void acr(Avto* a)
 if(a->next==NULL)
 {
 a->next=acreate();
+if(a->next==NULL)
+return;
 a->next->prev=a;
 a->next->index=a->index+1;
 return;
