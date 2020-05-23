@@ -44,26 +44,25 @@ if((fp=fopen("E:\\text.txt","r"))==NULL)
 }
 // поиск кол-ва букв в файле
  char ch=getc(fp);
- int j=0;
+ int razmer=0;
  char aa;
  while(ch!=EOF)
  {
-++j;
+++razmer;
 ch=getc(fp);
  }
 fseek(fp,0L,SEEK_SET);
-int n;
+int sdvig;
 
-char fail[j];
-for(int i=0;i<j;++i)
+char fail[razmer];
+for(int i=0;i<razmer;++i)
 fail[i]=getc(fp);
 
 printf("Имеющийся файл:");
 puts(fail);
 
-printf("На сколько Вы хотите сдвинуть файл вправо
-? На  ");
-if((scanf("%d",&n)!=1&&j>n)||(aa=getchar())!='\n')
+printf("На сколько Вы хотите сдвинуть файл вправо? На  ");
+if((scanf("%d",&sdvig)!=1&&razmer>sdvig)||(aa=getchar())!='\n')
 {
 	printf("Ошибка при вводе");
 	getch();
@@ -73,8 +72,8 @@ if((scanf("%d",&n)!=1&&j>n)||(aa=getchar())!='\n')
 
 fseek(fp,0L,SEEK_SET);
 
-for(int i=0;i<n;++i)
-smen(j,fail);
+for(int i=0;i<sdvig;++i)
+smen(razmer,fail);
 if(fclose(fp)!=0)
 printf("Ошибка при закрытии файла для чтения");
 
