@@ -19,47 +19,47 @@ int _tmain(int argc, _TCHAR* argv[])
 SetConsoleCP(1251);
 SetConsoleOutputCP(1251);
 printf("введите текст на английском, а я выведу слова, буквы которых стоят в алфавитном порядке\n");
-char t[40];
-char tt='1';
-char tr=0;
+char str[40];
+char prover='1';
+char prevChar=0;
 int i=0;
 _Bool bol=1;
 
-while((tt=getchar())!='\n')
+while((prover=getchar())!='\n')
 {
 //проверка на заглавные буквы
-  if(tt>='A'&&tt<='Z')
-  tt+=32;
+  if(prover>='A'&&prover<='Z')
+  prover+=32;
 
 //проверка на алфавитный порядок
-  if(tt>='a'&&tt<='z'&&tt>=tr&&i<40)
+  if(prover>='a'&&prover<='z'&&prover>=prevChar&&i<40)
   {
-	  tr=tt;
-	  t[i]=tr;
+	  prevChar=prover;
+	  str[i]=prevChar;
 	  ++i;
 
   }
 //провека на знаки препинания
-  else if((tt>=' '&&tt<=47)||(tt>=91&&tt<96))
+  else if((prover>=' '&&prover<=47)||(prover>=91&&prover<96))
   {
 	if(i!=0)
-	{tr=0;
-	t[i]=0;
-	puts(t);
+	{prevChar=0;
+	str[i]=0;
+	puts(str);
 	i=0;
 	bol=0;
 	}
   }
 //проверка на неалфавитный порядок
-   else if(tr>tt) {
-		tr=0;
+   else if(prevChar>prover) {
+		prevChar=0;
 		i=0;
-		t[0]=0;
+		str[0]=0;
 		//избавление от ненужных уже в проверке слов
 		for(;;)
-		if((tt=getchar())<'a')
+		if((prover=getchar())<'a')
 		{
-			if(tt=='\n')
+			if(prover=='\n')
 			{
 				getch();
 				return 0;
@@ -70,13 +70,13 @@ while((tt=getchar())!='\n')
 		//проверка на все остальное
   else
   {
-	tr=0;
-	t[0]=0;
+	prevChar=0;
+	str[0]=0;
 	i=0;
     		for(;;)
-		if((tt=getchar())<'a')
+		if((prover=getchar())<'a')
 		{
-			if(tt=='\n')
+			if(prover=='\n')
 			{
 				getch();
 				return 0;
